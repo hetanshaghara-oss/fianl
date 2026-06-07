@@ -1,0 +1,211 @@
+﻿Diagnose log at 2026-06-04T08:13:41Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.7.3+5fa7116896c82164996a609accd1c5ad90fe730a
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26200)
+Reading environment variables... OK
+ Variables:
+ORIGINAL_TMP=C:/Users/hetansh/AppData/Local/Temp
+ProgramFiles(x86)=C:\Program Files (x86)
+MSYSTEM=MINGW64
+EFC_10148_3789132940=1
+EXEPATH=C:\Program Files\Git\bin
+ORIGINAL_PATH=C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\hetansh\bin;C:\Users\hetansh\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Users\hetansh\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\MinGW\bin;C:\Program Files\Java\jdk-24\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs;C:\Users\hetansh\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\hetansh\AppData\Local\Programs\Python\Python311;C:\Users\hetansh\AppData\Local\Programs\cursor\resources\app\codeBin;C:\Users\hetansh\AppData\Local\Microsoft\WindowsApps;C:\Users\hetansh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hetansh\AppData\Local\GitHubDesktop\bin;C:\Users\hetansh\AppData\Local\Programs\Antigravity\bin;C:\Users\hetansh\AppData\Local\Python\bin;C:\Users\hetansh\AppData\Roaming\npm
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=C:/Program Files/Git/mingw64/lib
+APPDATA=C:\Users\hetansh\AppData\Roaming
+TMP=C:\Users\hetansh\AppData\Local\Temp
+PROCESSOR_ARCHITECTURE=AMD64
+INFOPATH=C:\Program Files\Git\mingw64\local\info;C:\Program Files\Git\mingw64\share\info;C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+CLAUDE_CODE_SSE_PORT=59192
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\hetansh\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\493597c785d4c5cb\askpass-main.js
+ANTHROPIC_BASE_URL=https://opencode.ai/zen
+EFC_10148_2283032206=1
+PWD=C:/Users/hetansh/Desktop/agent
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-74f6c0324c-sock
+CONFIG_SITE=C:/Program Files/Git/etc/config.site
+PROCESSOR_REVISION=9a03
+TEMP=C:\Users\hetansh\AppData\Local\Temp
+USERPROFILE=C:\Users\hetansh
+PKG_CONFIG_PATH=C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig
+GIT_ASKPASS=c:\Users\hetansh\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\493597c785d4c5cb\askpass.sh
+TERM=xterm-256color
+ENABLE_TOOL_SEARCH=true
+SESSIONNAME=Console
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_15400_KVUSUXAQZCMDCDSU
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+PLINK_PROTOCOL=ssh
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+HOSTNAME=hetansh578
+PATH=C:/Program Files/Git/mingw64/libexec/git-core;C:\Users\hetansh\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\hetansh\bin;C:\Users\hetansh\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Users\hetansh\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\MinGW\bin;C:\Program Files\Java\jdk-24\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs;C:\Users\hetansh\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\hetansh\AppData\Local\Programs\Python\Python311;C:\Users\hetansh\AppData\Local\Programs\cursor\resources\app\codeBin;C:\Users\hetansh\AppData\Local\Microsoft\WindowsApps;C:\Users\hetansh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hetansh\AppData\Local\GitHubDesktop\bin;C:\Users\hetansh\AppData\Local\Programs\Antigravity\bin;C:\Users\hetansh\AppData\Local\Python\bin;C:\Users\hetansh\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+OneDrive=C:\Users\hetansh\OneDrive
+EFC_10148_4126798990=1
+MSYSTEM_CARCH=x86_64
+"C:\Users\hetansh\Desktop\MinGW Installer.lnk"="C:\Users\hetansh\Desktop\MinGW Installer.lnk"
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+ZES_ENABLE_SYSMAN=1
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=C:/Program Files/Git/mingw64/include
+PROCESSOR_LEVEL=6
+ProgramW6432=C:\Program Files
+MINGW_CHOST=x86_64-w64-mingw32
+ANTHROPIC_MODEL=minimax-m3-free
+HOMEPATH=\Users\hetansh
+DISPLAY=needs-to-be-defined
+MANPATH=C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man
+WINDIR=C:\Windows
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+EFC_10148_2775293581=1
+ALLUSERSPROFILE=C:\ProgramData
+COPILOT_DEBUG_NONCE=390f27ef493e66d4b7bbb0e6234804e2
+USERNAME=hetansh
+SYSTEMROOT=C:\Windows
+_=C:/Program Files/Git/mingw64/bin/git
+EFC_10148_1262719628=1
+NUMBER_OF_PROCESSORS=12
+SHELL=C:\Program Files\Git\usr\bin\bash.exe
+PROGRAMFILES=C:\Program Files
+SHLVL=1
+ProgramData=C:\ProgramData
+DriverData=C:\Windows\System32\Drivers\DriverData
+HOMEDRIVE=C:
+ACLOCAL_PATH=C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
+GIT_TRACE2_PARENT_SID=b0bb4eb3-c99b-4e85-91e8-426590e73bd6
+EFC_10148_1592913036=1
+LOCALAPPDATA=C:\Users\hetansh\AppData\Local
+OS=Windows_NT
+MSYSTEM_PREFIX=C:/Program Files/Git/mingw64
+LANG=en_US.UTF-8
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MINGW_PREFIX=C:/Program Files/Git/mingw64
+ORIGINAL_TEMP=C:/Users/hetansh/AppData/Local/Temp
+HOME=C:\Users\hetansh
+LOGONSERVER=\\HETANSH578
+SYSTEMDRIVE=C:
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+TMPDIR=C:\Users\hetansh\AppData\Local\Temp
+USERDOMAIN=hetansh578
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+PS1=\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]
+COMPUTERNAME=HETANSH578
+SSH_ASKPASS=C:/Program Files/Git/mingw64/bin/git-askpass.exe
+COMSPEC=C:\Windows\system32\cmd.exe
+CommonProgramW6432=C:\Program Files\Common Files
+VSCODE_GIT_ASKPASS_NODE=C:\Users\hetansh\AppData\Local\Programs\Microsoft VS Code\Code.exe
+TERM_PROGRAM_VERSION=1.122.1
+USERDOMAIN_ROAMINGPROFILE=hetansh578
+COLORTERM=truecolor
+PUBLIC=C:\Users\Public
+TERM_PROGRAM=vscode
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\hetansh\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\hetansh\AppData\Local\Temp\e0104a088ec777d77d1bc85f'... OK
+Reading from temporary file 'C:\Users\hetansh\AppData\Local\Temp\e0104a088ec777d77d1bc85f'... OK
+Deleting temporary file 'C:\Users\hetansh\AppData\Local\Temp\e0104a088ec777d77d1bc85f'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\hetansh
+UserDataDirectoryPath: C:\Users\hetansh\.gcm
+GetCurrentDirectory(): C:\Users\hetansh\Desktop\agent
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:54047/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.53.0.windows.2'
+Locating current repository...Git repository at 'C:/Users/hetansh/Desktop/agent/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Users/hetansh/.gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Users/hetansh/.gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Users/hetansh/.gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Users/hetansh/.gitconfig	filter.lfs.required=true
+file:C:/Users/hetansh/.gitconfig	user.name=Aghara Hetansh
+file:C:/Users/hetansh/.gitconfig	user.email=agharahetansh62@gmail.com
+file:C:/Users/hetansh/.gitconfig	yser.name=hetanshaghara
+file:C:/Users/hetansh/.gitconfig	credential.helper=manager
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/AgharaHetansh/fifa.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\hetansh\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\hetansh\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+

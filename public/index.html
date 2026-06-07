@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldCup 2026 ELO Analyst AI</title>
+    <meta name="description" content="WorldCup 2026 ELO Analyst AI — powered by Google Gemini. Get match predictions, team rankings, and win probabilities based on official ELO ratings." />
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated Background Shapes for Glassmorphism Depth -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <div class="container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="logo">
+          <h1>⚽ ELO Analyst</h1>
+          <p>WorldCup 2026 AI</p>
+        </div>
+        <nav class="nav-menu">
+          <button class="nav-btn active" id="nav-dashboard" data-view="dashboard">🏠 Dashboard</button>
+          <button class="nav-btn" id="nav-chat" data-view="chat">💬 Ask the AI</button>
+          <button class="nav-btn" id="nav-rankings" data-view="rankings">🏆 Rankings</button>
+          <button class="nav-btn" id="nav-team" data-view="team">🔍 Team Details</button>
+          <button class="nav-btn" id="nav-h2h" data-view="h2h">⚔️ Compare Teams</button>
+          <button class="nav-btn" id="nav-confederations" data-view="confederations">🌍 Confederations</button>
+        </nav>
+
+        <!-- System Health Status -->
+        <div class="system-status" id="system-status">
+          <div class="status-title">System Status</div>
+          <div class="status-row">
+            <span class="status-dot" id="dot-mongo"></span>
+            <span class="status-label">MongoDB</span>
+          </div>
+          <div class="status-row">
+            <span class="status-dot" id="dot-gemini"></span>
+            <span class="status-label">Gemini AI</span>
+          </div>
+          <div class="status-row">
+            <span class="status-dot" id="dot-elo"></span>
+            <span class="status-label" id="label-elo">ELO Data</span>
+          </div>
+        </div>
+
+        <div class="theme-toggle">
+          <button id="theme-btn">🌙 Dark Mode</button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- ── Dashboard View ── -->
+        <section id="dashboard-view" class="view active">
+          <div class="dashboard-hero">
+            <div class="hero-badge">⚽ WORLDCUP 2026</div>
+            <h2>ELO Analyst AI</h2>
+            <p>AI-powered match predictions &amp; team analytics backed by real ELO ratings data.</p>
+          </div>
+
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <div class="stat-icon">🌍</div>
+              <h3>Total Teams</h3>
+              <p id="dash-total-teams" class="stat-number">--</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">📊</div>
+              <h3>Avg ELO Rating</h3>
+              <p id="dash-avg-rating" class="stat-number">--</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🏅</div>
+              <h3>Top Confederation</h3>
+              <p id="dash-top-confed" class="stat-number">--</p>
+            </div>
+          </div>
+
+          <div class="dashboard-podium">
+            <h3>🥇 Top 3 Ranked Teams</h3>
+            <div id="podium-container" class="podium-container">
+              <div class="loading">Loading Top Teams...</div>
+            </div>
+          </div>
+
+          <div class="dashboard-actions">
+            <div class="action-card" onclick="document.getElementById('nav-chat').click()">
+              <h3>💬 Ask the AI</h3>
+              <p>Get match predictions &amp; analysis powered by Gemini.</p>
+            </div>
+            <div class="action-card" onclick="document.getElementById('nav-h2h').click()">
+              <h3>⚔️ Compare Teams</h3>
+              <p>Simulate a head-to-head matchup with ELO win probabilities.</p>
+            </div>
+            <div class="action-card" onclick="document.getElementById('nav-rankings').click()">
+              <h3>🏆 Full Rankings</h3>
+              <p>Browse all 2026 World Cup teams sorted by ELO rating.</p>
+            </div>
+            <div class="action-card" onclick="document.getElementById('nav-confederations').click()">
+              <h3>🌍 Confederations</h3>
+              <p>Compare UEFA, CONMEBOL, CAF and all other confederations.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Chat View ── -->
+        <section id="chat-view" class="view">
+          <div class="chat-header">
+            <div class="agent-status-badge">
+              <span id="status-dot" class="status-dot fallback"></span>
+              <span id="status-text">Gemini AI</span>
+            </div>
+            <h2>Ask the ELO Analyst AI</h2>
+            <p>Powered by real 2026 ELO data — ask about teams, predictions, rankings</p>
+          </div>
+
+          <!-- Suggestion Chips -->
+          <div class="suggestion-chips">
+            <button class="chip" data-msg="Who will win between France and Brazil?">⚽ France vs Brazil</button>
+            <button class="chip" data-msg="What are the top 10 ranked teams for 2026?">🏆 Top 10 Teams</button>
+            <button class="chip" data-msg="Compare Argentina and England ELO ratings">⚔️ Argentina vs England</button>
+            <button class="chip" data-msg="Who is the favourite to win WorldCup 2026?">🌟 WC2026 Favourite</button>
+          </div>
+
+          <div class="chat-box">
+            <div id="messages" class="messages"></div>
+            <div class="input-group">
+              <input
+                type="text"
+                id="chat-input"
+                placeholder="E.g., 'Who will win between France and Argentina?'"
+                autocomplete="off"
+              />
+              <button id="send-btn">Send ➤</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Rankings View ── -->
+        <section id="rankings-view" class="view">
+          <div class="rankings-header">
+            <h2>🏆 World Cup 2026 Rankings</h2>
+            <p>All Teams by ELO Rating — 2026 Data</p>
+          </div>
+          <div class="rankings-container">
+            <div id="rankings-list" class="rankings-table">
+              <div class="loading">Loading rankings...</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Team Details View ── -->
+        <section id="team-view" class="view">
+          <div class="team-header">
+            <h2>🔍 Team Details</h2>
+            <div class="team-search">
+              <input
+                type="text"
+                id="team-search"
+                placeholder="Search team (e.g., France, Argentina, Brazil)"
+                autocomplete="off"
+              />
+              <button id="team-search-btn">Search</button>
+            </div>
+          </div>
+          <div id="team-details" class="team-content">
+            <p class="placeholder">Enter a team name above to view full ELO stats &amp; history</p>
+          </div>
+        </section>
+
+        <!-- ── Head to Head View ── -->
+        <section id="h2h-view" class="view">
+          <div class="h2h-header">
+            <h2>⚔️ Head to Head Comparison</h2>
+            <p>Compare two teams using the official ELO win probability formula</p>
+          </div>
+          <div class="h2h-container">
+            <div class="h2h-inputs">
+              <div class="input-field">
+                <label>Team 1</label>
+                <input type="text" id="team1-input" placeholder="e.g. France" autocomplete="off" />
+              </div>
+              <div class="vs-text">VS</div>
+              <div class="input-field">
+                <label>Team 2</label>
+                <input type="text" id="team2-input" placeholder="e.g. Brazil" autocomplete="off" />
+              </div>
+              <button id="compare-btn">Compare ⚡</button>
+            </div>
+            <div id="h2h-result" class="h2h-result">
+              <p class="placeholder">Enter two team names above to compare</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Confederations View (NEW) ── -->
+        <section id="confederations-view" class="view">
+          <div class="conf-header">
+            <h2>🌍 Confederations Overview</h2>
+            <p>2026 ELO data grouped by confederation</p>
+          </div>
+          <div id="confederations-list" class="conf-list">
+            <div class="loading">Loading confederations...</div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
