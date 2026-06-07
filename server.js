@@ -18,9 +18,21 @@ app.use(express.static("public")); // Serve frontend from /public
 // ─────────────────────────────────────────
 let eloData = [];
 try {
-  const filePath = process.env.ELO_DATA_FILE || "./elo_ratings_wc2026.json";
-  const raw = fs.readFileSync(filePath, "utf8");
-  eloData = JSON.parse(raw);
+  const customPath = process.env.ELO_DATA_FILE;
+  if (customPath) {
+    const raw = fs.readFileSync(path.resolve(customPath), "utf8");
+    eloData = JSON.parse(raw);
+  } else {
+    // Attempt absolute path resolution relative to server.js directory
+    const filePath = path.join(__dirname, "elo_ratings_wc2026.json");
+    if (fs.existsSync(filePath)) {
+      const raw = fs.readFileSync(filePath, "utf8");
+      eloData = JSON.parse(raw);
+    } else {
+      // Fallback: Use require() to load JSON which forces Vercel to bundle the file
+      eloData = require("./elo_ratings_wc2026.json");
+    }
+  }
   console.log(`✅ ELO data loaded (${eloData.length} records)`);
 } catch (err) {
   console.error("❌ Failed to load ELO data:", err.message);
@@ -31,7 +43,8 @@ try {
 // ─────────────────────────────────────────
 let systemPrompt = "";
 try {
-  systemPrompt = fs.readFileSync("./system_prompt.txt", "utf8");
+  const promptPath = path.join(__dirname, "system_prompt.txt");
+  systemPrompt = fs.readFileSync(promptPath, "utf8");
 } catch (err) {
   console.error("❌ Failed to load system_prompt.txt:", err.message);
   systemPrompt = "You are a WorldCup 2026 ELO Analyst AI.";
